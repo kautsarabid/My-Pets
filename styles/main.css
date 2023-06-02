@@ -111,6 +111,48 @@ main form .optional p {
   font-size: 15px;
 }
 
+/*
+  LAYANAN SECTION
+*/
+
+main .layanan__section {
+  margin-top: 8.5em;
+}
+
+main .title__mypets {
+  color: #007655;
+}
+
+main .tanda__seru {
+  color: #F5BB54;
+}
+
+main .btn__cek__hewan {
+  text-decoration: none;
+  width: 100%;
+  color: black;
+  border: 1px solid #004E38;
+  transition: .2s ease-in-out;
+}
+
+main .btn__cek__hewan:hover {
+  background-color: #004E38;
+  color: white;
+}
+
+main .btn__daftar__hewan__baru {
+  text-decoration: none;
+  color: white;
+  border: none;
+  background-color: #004E38;
+}
+
+main .btn__daftar__hewan__baru:hover {
+  border: 1px solid #004E38;
+  color: black;
+  background-color: white;
+}
+
 
 
 
