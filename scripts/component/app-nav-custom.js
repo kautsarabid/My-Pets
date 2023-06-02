@@ -18,7 +18,7 @@ class AppNavCustom extends HTMLElement {
               <a class="nav-link text-white" aria-current="page" href="#">Bantuan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Layanan</a>
+              <a class="nav-link text-white" href="../../templates/layanan.html">Layanan</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="../../templates/form-masuk.html">Masuk</a>
