@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Pets</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+
+<body>
+  <header>
+    <app-nav-custom></app-nav-custom>
+  </header>
+
+  <main id="layanan__page">
+    <div class="container">
+      <div class="layanan__section row justify-content-lg-evenly align-items-lg-center">
+        <section class="col-lg-7 gambar mb-md-5 mb-sm-5 text-center">
+          <img src="../images/kucing.png" alt="kucing" class="mx-auto">
+
+          <a href="#"
+            class="btn__daftar__hewan__baru d-inline-block text-center w-50 p-2 fs-6 fw-bold mt-3 rounded-5">Daftar
+            Hewan
+            Baru</a>
+        </section>
+
+        <section class="col-lg deskripsi__layanan">
+          <h1 class="fw-bold">Halo, Selamat Datang di Website <span class="title__mypets">Mypets</span><span
+              class="tanda__seru">!</span></h1>
+
+          <p class="fw-medium mb-3">Kami hadir dengan fitur menarik untuk membantu kamu buat lebih memperhatikan hewan
+            peliharaanmu</p>
+
+
+          <a href="#" class="d-inline-block text-center btn__cek__hewan p-4 fs-4 fw-bold mt-3 rounded-5">Cek Hewan
+            Anda</a>
+
+        </section>
+      </div>
+
+      <div class="layanan__section__tentang">
+        <section class="mt-5">
+          <h2 class="fw-bold text-center">Tentang <span class="title__mypets">MyPets</span><span
+              class="tanda__seru">!</span></h2>
+
+          <article class="text-center">
+            <p><span class="title__mypets fw-medium">MyPets</span><span class="tanda__seru fw-medium">!</span> merupakan
+              sebuah
+              website yang
+              dapat membantu para pemilik hewan peliharaan agar lebih teratur
+              dalam memberi
+              makan, melakukan cek kesehatan dan rutin memberikan vaksinasi pada hewan mereka, selain itu juga dapat
+              memberikan
+              catatan riwayat penyakit yang di derita agar kedepannya tidak terjadi kesalahan penanganan.</p>
+
+            <p><span class="title__mypets fw-medium">MyPets</span><span class="tanda__seru fw-medium">!</span> hadir
+              karena banyak
+              kasus pemilik hewan yang tidak terlalu memperhatikan hewan peliharaanya akibat dari memilih untuk
+              memelihara hanya
+              karena mengikuti trend</p>
+          </article>
+        </section>
+
+        <section class="team__pengembang mt-lg-5">
+          <h2 class="text-center fw-bold mb-lg-3">Team Pengembang</h2>
+          <div class="row">
+            <div class="col">
+              <img src="../images/sample-foto.png" alt="" class="mx-auto mb-3">
+              <p class="text-center">Ferdinand Jery Wilkinson Sitorus</p>
+            </div>
+            <div class="col">
+              <img src="../images/sample-foto.png" alt="" class="mx-auto mb-3">
+              <p class="text-center">Irsan Efendi Rangkuti</p>
+            </div>
+            <div class="col">
+              <img src="../images/sample-foto.png" alt="" class="mx-auto mb-3">
+              <p class="text-center">Kautsar Abid Muttaqin</p>
+            </div>
+            <div class="col">
+              <img src="../images/sample-foto.png" alt="" class="mx-auto mb-3">
+              <p class="text-center">Alfian Rachmad Dianto</p>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <app-footer-custom></app-footer-custom>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <script src="../scripts/index.js" type="module"></script>
+</body>
+
+</html>
