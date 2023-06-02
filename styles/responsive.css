@@ -1,0 +1,68 @@
+@media screen and (max-width: 1200px) {
+  body {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .halaman__utama {
+    margin-top: 20em;
+  }
+
+  .halaman__utama .deskripsi__section {
+    z-index: 99;
+  }
+
+  .halaman__utama .gambar__section img {
+    position: absolute;
+    /* top: 1em; */
+    right: 0;
+    bottom: 0;
+    width: 349px;
+    height: 504px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .halaman__utama {
+    margin-top: 20em;
+  }
+
+  .halaman__utama .deskripsi__section {
+    z-index: 99;
+  }
+
+  .halaman__utama .gambar__section img {
+    position: absolute;
+    /* top: 1em; */
+    right: 0;
+    bottom: 0;
+    width: 349px;
+    height: 504px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .halaman__utama {
+    margin-top: 15em;
+  }
+
+  .halaman__utama .deskripsi__section {
+    z-index: 99;
+  }
+
+  .halaman__utama .gambar__section img {
+    position: absolute;
+    /* top: 1em; */
+    right: 0;
+    bottom: 0;
+    width: 349px;
+    height: 504px;
+  }
+}
