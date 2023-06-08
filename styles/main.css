@@ -10,7 +10,7 @@ body {
   color: #F5BB54;
 }
 
-.navbar-nav {
+/* .navbar-nav {
   width: 40%;
   text-align: center;
 }
@@ -18,13 +18,13 @@ body {
 .nav-item {
   width: 100%;
 }
+*/
 
 .navbar-nav .nav-item a {
-  font-size: 13px;
-  padding: 1em;
+  /* padding: 1em; */
   letter-spacing: 3px;
-  font-weight: 600;
 }
+
 
 .navbar-nav .nav-item:nth-child(3) a {
   border: 1px solid #F5BB54;
@@ -41,13 +41,14 @@ body {
 
 main#landing__page {
   background-color: #00C48D;
+  height: 100vh;
 }
 
-.halaman__utama .deskripsi__section h1 span {
+.deskripsi__section h1 span {
   position: relative;
 }
 
-.halaman__utama .deskripsi__section h1 span::before {
+.deskripsi__section h1 span::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -58,12 +59,12 @@ main#landing__page {
   border: 2px solid #F5BB54;
 }
 
-.halaman__utama .gambar__section img {
-  width: 500px;
-  height: 694px;
-}
+/* .halaman__utama img {
+  width: 300px;
+  height: 494px;
+} */
 
-.halaman__utama .deskripsi__section .btn__daftar {
+.deskripsi__section .btn__daftar {
   text-decoration: none;
   text-align: center;
   width: 30%;
@@ -78,13 +79,13 @@ main#landing__page {
   transition: .2s ease-in-out;
 }
 
-.halaman__utama .deskripsi__section .btn__daftar:hover {
+.deskripsi__section .btn__daftar:hover {
   box-shadow: none;
 }
 
-img {
+/* img {
   display: block;
-}
+} */
 
 /*
   MAIN SECTION FORM 
