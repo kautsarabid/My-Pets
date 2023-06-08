@@ -10,16 +10,6 @@ body {
   color: #F5BB54;
 }
 
-/* .navbar-nav {
-  width: 40%;
-  text-align: center;
-}
-
-.nav-item {
-  width: 100%;
-}
-*/
-
 .navbar-nav .nav-item a {
   /* padding: 1em; */
   letter-spacing: 3px;

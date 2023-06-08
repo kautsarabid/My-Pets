@@ -5,16 +5,16 @@ class AppFooterCustom extends HTMLElement {
 
   render() {
     this.innerHTML = `
-          <div class="deskripsi__footer mb-0 mt-5 text-white p-3">
+    <div class="deskripsi__footer mb-0 mt-5 text-white p-3">
       <div class="container text-center">
-        <div class="row align-items-center">
+        <div class="row row-cols-1 row-cols-sm-2 justify-content-sm-center align-items-sm-center row-cols-md-3">
 
-          <div class="col-lg brand__name">
+          <div class="col brand__name">
             <h1 class="fw-bold">MP<span>!</span></h1>
           </div>
 
-          <div class="col-lg navigasi">
-            <ul>
+          <div class="col navigasi">
+            <ul class="ps-0 mt-2">
               <h2 class="title__footer">Navigasi</h2>
               <li><a href="">Beranda</a></li>
               <li><a href="">Masuk</a></li>
@@ -22,8 +22,8 @@ class AppFooterCustom extends HTMLElement {
             </ul>
           </div>
 
-          <div class="col-lg pengembang">
-            <ul>
+          <div class="col pengembang">
+            <ul class="ps-0 mt-2">
               <h2 class="title__footer">Pengembang</h2>
               <li><a href="">Ferdinand Jery Wilkinson Sitorus</a></li>
               <li><a href="">Irsan Efendi Rangkuti</a></li>
