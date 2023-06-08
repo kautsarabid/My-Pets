@@ -5,8 +5,8 @@ class FromMasuk extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div class="container">
-      <form class="form__masuk mx-5 border-black border border-dark-subtle p-5 rounded-2 shadow-lg w-75 mx-auto">
+      <div class="container-fluid">
+      <form class="form__masuk border-black border border-dark-subtle p-4 rounded-2 shadow-lg mx-auto">
         <h1 class="text-center fw-bold fs-1">Masuk</h1>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label fw-bold">Alamat Email</label>

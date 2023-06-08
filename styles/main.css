@@ -59,11 +59,6 @@ main#landing__page {
   border: 2px solid #F5BB54;
 }
 
-/* .halaman__utama img {
-  width: 300px;
-  height: 494px;
-} */
-
 .deskripsi__section .btn__daftar {
   text-decoration: none;
   text-align: center;
@@ -82,10 +77,6 @@ main#landing__page {
 .deskripsi__section .btn__daftar:hover {
   box-shadow: none;
 }
-
-/* img {
-  display: block;
-} */
 
 /*
   MAIN SECTION FORM 
