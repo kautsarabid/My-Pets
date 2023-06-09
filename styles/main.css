@@ -68,6 +68,13 @@ main#landing__page {
   box-shadow: none;
 }
 
+.halaman__utama img {
+  display: block;
+  width: 638px;
+  height: 663px;
+}
+
+
 /*
   MAIN SECTION FORM 
 */
