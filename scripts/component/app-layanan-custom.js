@@ -10,7 +10,7 @@ class AppLayananCustom extends HTMLElement {
         <section class="col col-lg-7 gambar mb-md-5 mb-sm-5 text-center">
           <img src="../images/kucing.png" alt="kucing" class="mx-auto d-block">
 
-          <a href="#"
+          <a href="../../templates/form-pendataan-hewan.html"
             class="btn__daftar__hewan__baru d-block text-center w-50 p-2 fs-6 fw-bold my-3 mx-auto rounded-5">Daftar
             Hewan
             Baru</a>
