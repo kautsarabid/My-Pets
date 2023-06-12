@@ -79,7 +79,9 @@ main#landing__page {
   MAIN SECTION FORM 
 */
 
-main form {
+main form,
+main#data__hewan,
+main#form__pendataan-hewan {
   margin-top: 8.3em;
 }
 
@@ -142,8 +144,20 @@ main .btn__daftar__hewan__baru:hover {
   background-color: white;
 }
 
+/*
+  DATA HEWAN
+*/
 
+#data__hewan .card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: none;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
 
+#data__hewan .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
 
 
 /*

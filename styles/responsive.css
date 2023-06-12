@@ -18,8 +18,12 @@
       FORM SECTION 
     */
 
-  .form__masuk {
+  form {
     width: 100% !important;
+  }
+
+  ::placeholder {
+    font-size: .7em;
   }
 }
 
@@ -47,7 +51,7 @@
     FORM SECTION 
   */
 
-  .form__masuk {
+  form {
     width: 75%;
     padding: 3em;
   }
@@ -63,7 +67,7 @@
       FORM SECTION 
     */
 
-  .form__masuk {
+  form {
     width: 75%;
     padding: 3em;
   }
