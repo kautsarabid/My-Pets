@@ -15,7 +15,7 @@ class AppNavCustom extends HTMLElement {
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item text-center fs-6 ">
-              <a class="nav-link text-white p-3" aria-current="page" href="#">Bantuan</a>
+              <a class="nav-link text-white p-3" aria-current="page" href="../../templates/data-hewan.html">Data Hewan</a>
             </li>
             <li class="nav-item text-center fs-6">
               <a class="nav-link text-white p-3" href="../../templates/layanan.html">Layanan</a>
