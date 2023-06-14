@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <form method="POST" action="/data-hewan"
+    class="form__pendataan-hewan border-black border border-dark-subtle p-5 rounded-2 shadow-lg  mx-auto">
+    <h1 class="mb-3 fs-1 text-center fw-bold">Pendataan Hewan Peliharaan</h1>
+    <div class="mb-3">
+      <label for="nama" class="form-label fw-bold">Nama Hewan</label>
+      <input type="text" class="form-control p-3" id="nama" name="nama"
+        placeholder="Masukkan nama hewan peliharaan Anda" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="jenis" class="form-label fw-bold">Jenis Hewan</label>
+      <input type="text" class="form-control p-3" id="jenis" name="jenis"
+        placeholder="Masukkan jenis hewan peliharaan Anda" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="umur" class="form-label fw-bold">Umur Hewan</label>
+      <div class="input-group">
+        <input type="number" class="form-control p-3" id="umur" name="umur"
+          placeholder="Masukkan umur hewan peliharaan Anda" aria-label="Recipient's age" aria-describedby="basic-addon2"
+          required>
+        <span class="input-group-text" id="basic-addon2">Tahun</span>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="beratBadan" class="form-label fw-bold">Berat Badan Hewan</label>
+      <div class="input-group">
+        <input type="number" class="form-control p-3" id="beratBadan" name="beratBadan"
+          placeholder="Masukkan berat badan hewan peliharaan Anda" aria-label="Recipient's berat badan"
+          aria-describedby="basic-addon3" required>
+        <span class="input-group-text" id="basic-addon3">Kg</span>
+      </div>
+    </div>
+
+
+    <button type="submit" class="btn__form rounded-3 shadow-sm p-3 mb-3">Submit</button>
+
+  </form>
+</div>

@@ -1,0 +1,39 @@
+<div class="container" id="data__hewan">
+  <h1 class="text-center fw-bold mb-3">Data Hewan</h1>
+  <div class="w-100 justify-content-center align-items-center row row-cols-1 gap-4">
+    <a href="/form-pendataan-hewan"
+      class="btn__form p-3 text-center text-decoration-none rounded-3 shadow-sm p-3 w-75">Tambah Hewan Baru</a>
+
+    <% if (msg.length !==0) { %>
+      <div class="alert alert-success fw-bold" role="alert">
+        <%= msg %>
+      </div>
+      <% } %>
+
+        <% if (dataHewans.length < 1) { %>
+          <div class="alert alert-danger fw-bold" role="alert">
+            Tidak terdapat data hewan <a href="/form-pendataan-hewan" class="alert-link fw-normal">&laquo Tambah data
+              hewan</a>
+          </div>
+          <% } %>
+            <% dataHewans.forEach(hewan=> { %>
+              <div class="card col" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title fs-2 fw-bold text-capitalize">
+                    <%= hewan.jenis %>
+                  </h5> <!-- Jenis -->
+                  <h6 class="card-subtitle mb-2 text-capitalize">
+                    <%= hewan.nama %>
+                  </h6> <!-- Nama -->
+                  <h6>
+                    <%= hewan.umur %> Tahun
+                  </h6> <!-- Umur -->
+                  <h6>
+                    <%= hewan.beratBadan %> Kg
+                  </h6> <!-- Berat Badan -->
+                  <a href="/data-hewan/<%= hewan.nama %>" class="card-link">Detail</a>
+                </div>
+              </div>
+              <% }) %>
+  </div>
+</div>

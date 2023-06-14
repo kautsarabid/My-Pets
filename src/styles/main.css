@@ -71,7 +71,7 @@ main#landing__page {
 .halaman__utama img {
   display: block;
   width: 638px;
-  height: 663px;
+  height: 587px;
 }
 
 
@@ -80,12 +80,12 @@ main#landing__page {
 */
 
 main form,
-main#data__hewan,
-main#form__pendataan-hewan {
+#data__hewan,
+#form__pendataan-hewan {
   margin-top: 8.3em;
 }
 
-main form .btn__form {
+.btn__form {
   width: 100%;
   background-color: #F5BB54;
   color: white;
