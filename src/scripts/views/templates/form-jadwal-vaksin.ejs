@@ -1,0 +1,45 @@
+<div class="container-fluid">
+
+  <form method="POST" action="/data-hewan/<%= dataHewan.nama %>/kartu-vaksin" class="mx-auto">
+
+    <h1 class="fw-bold text-capitalize text-center mt-0">Buat Jadwal Vaksin <%= dataHewan.nama %>
+    </h1>
+    <div class="row g-3 border rounded-3 p-2 m-2">
+      <input type="hidden" name="_id" value="<% dataHewan._id %>">
+
+      <div class="col-12">
+        <label for="nama" class="form-label fw-bold"> Nama </label>
+        <input class=" form-control text-capitalize p-3" type="text" name="nama" id="nama" value="<%= dataHewan.nama %>"
+          disabled>
+      </div>
+
+      <div class="col-12">
+        <label for="jenis" class="form-label fw-bold"> Jenis </label>
+        <input class=" form-control text-capitalize p-3" type="text" name="jenis" id="jenis"
+          value="<%= dataHewan.jenis %>" disabled>
+      </div>
+
+      <div class="col">
+        <label for="waktuVaksin" class="form-label fw-bold"> Waktu </label>
+        <input type="time" class="form-control p-3" name="waktuVaksin" id="waktuVaksin" value="08:00" min="08.00"
+          max="15.30" required>
+      </div>
+
+      <div class="col">
+        <label for="tanggalVaksin" class="form-label fw-bold"> Tanggal </label>
+        <input class="form-control p-3" type="date" name="tanggalVaksin" id="tanggalVaksin" value="2023-06-10"
+          min="2018-01-01" required>
+      </div>
+
+
+    </div>
+
+    <button class="btn btn-success mt-2 d-block mx-auto w-100 rounded-3 shadow-sm p-3 mt-3" id="btn-jadwalMakan"
+      type="submit">Done</button>
+  </form>
+  <a href="/data-hewan/<%= dataHewan.nama %>/kartu-vaksin" class="card-link d-block mt-3">
+    Lihat jadwal vaksin</a>
+
+  <a href="/data-hewan/<%= dataHewan.nama %>" class="card-link d-block mt-3">
+    &laquo Kembali ke Data Hewan</a>
+</div>

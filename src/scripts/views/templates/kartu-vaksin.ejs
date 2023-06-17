@@ -1,0 +1,44 @@
+<div class="container" style="margin-top: 8.3em;">
+
+  <% if (msg.length> 0) { %>
+    <div class="alert alert-success fw-bold" role="alert">
+      <%= msg %>
+    </div>
+    <% } %>
+
+      <h1 class="text-center text-uppercase fw-bold mb-3">Tiket Vaksin <%= dataHewan.nama %>
+      </h1>
+      <div class="card mb-3" style=" width: 25em; height: 20em;" id="card">
+        <h6 id="logo__tiket-vaksin" class="fw-bold">
+          <span class="title__mypets ">MyPets</span><span class="tanda__seru ">!</span>
+        </h6>
+        <div class="card-header border-bottom bg-transparent text-white">
+          <h1 class="fw-bold fs-2 text-center text-uppercase">Tiket Vaksin</h1>
+        </div>
+        <div class="card-body" id="card__tiket-vaksin">
+          <div class="header text-capitalize border-bottom border-secondary mb-3">
+            <h4>Nama : <span class="fw-light">
+                <%= dataHewan.nama %>
+              </span>
+            </h4>
+            <h4>Jenis : <span class="fw-light">
+                <%= dataHewan.jenis %>
+              </span>
+            </h4>
+          </div>
+
+          <div class="time border-bottom border-secondary mb-3">
+            <h4>Tanggal : <span class="fw-light">
+                <%= tanggalVaksin %>
+              </span>
+            </h4>
+            <h4>Waktu : <span class="fw-light">
+                <%= waktuVaksin %>
+              </span>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <a href="/data-hewan" class="card-link d-inline">
+        &laquo Kembali ke Data Hewan</a>
+</div>

@@ -10,30 +10,32 @@
       </div>
       <% } %>
 
-        <% if (dataHewans.length < 1) { %>
+        <% if (dataHewan.length < 1) { %>
           <div class="alert alert-danger fw-bold" role="alert">
             Tidak terdapat data hewan <a href="/form-pendataan-hewan" class="alert-link fw-normal">&laquo Tambah data
               hewan</a>
           </div>
           <% } %>
-            <% dataHewans.forEach(hewan=> { %>
+            <% dataHewan.forEach(hewan=> { %>
               <div class="card col" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title fs-2 fw-bold text-capitalize">
-                    <%= hewan.jenis %>
-                  </h5> <!-- Jenis -->
-                  <h6 class="card-subtitle mb-2 text-capitalize">
-                    <%= hewan.nama %>
-                  </h6> <!-- Nama -->
-                  <h6>
-                    <%= hewan.umur %> Tahun
-                  </h6> <!-- Umur -->
-                  <h6>
-                    <%= hewan.beratBadan %> Kg
-                  </h6> <!-- Berat Badan -->
-                  <a href="/data-hewan/<%= hewan.nama %>" class="card-link">Detail</a>
-                </div>
+                <a href="/data-hewan/<%= hewan.nama %>" title="Click to see Detail"
+                  class="text-decoration-none text-black">
+                  <div class="card-body">
+                    <h5 class="card-title fs-2 fw-bold text-capitalize">
+                      <%= hewan.jenis %>
+                    </h5> <!-- Jenis -->
+                    <h6 class="card-subtitle mb-2 text-capitalize">
+                      <%= hewan.nama %>
+                    </h6> <!-- Nama -->
+                    <h6>
+                      <%= hewan.umur %> Tahun
+                    </h6> <!-- Umur -->
+                    <h6>
+                      <%= hewan.beratBadan %> Kg
+                    </h6> <!-- Berat Badan -->
+                </a>
               </div>
-              <% }) %>
   </div>
+  <% }) %>
+</div>
 </div>

@@ -1,0 +1,42 @@
+<div class="container vh-100 d-inline-block" id="data__hewan">
+  <h1 class="text-center fw-bold mb-3 text-capitalize">Jadwal Makan <%= dataHewan.nama %>
+  </h1>
+
+  <% if (msg.length> 0) { %>
+    <div class="alert alert-success fw-bold" role="alert">
+      <%= msg %>
+    </div>
+    <% } %>
+
+      <table class="table table-light table-hover mx-auto">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Hari</th>
+            <th scope="col">Tanggal</th>
+            <th scope="col">Waktu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% let no=1; %>
+            <% dataHewan.jadwalMakan.forEach((jadwal)=> { %>
+              <tr>
+                <th scope="row">
+                  <%= no++ %>
+                </th>
+                <td>
+                  <%= jadwal.hariMakan %>
+                </td>
+                <td>
+                  <%= jadwal.tanggalMakan %>
+                </td>
+                <td>
+                  <%= jadwal.waktuMakan %>
+                </td>
+              </tr>
+              <% }) %>
+        </tbody>
+      </table>
+      <a href="/data-hewan/<%= dataHewan.nama %>" class="card-link d-block mt-3">&laquo Kembali ke Detail
+        Data Hewan</a>
+</div>

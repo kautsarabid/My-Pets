@@ -1,0 +1,32 @@
+<form action="/data-hewan/<%= dataHewan.nama %>/jadwal-makan" method="POST" class="d-block mx-auto">
+
+  <h1 class="fw-bold text-capitalize text-center mt-0">Pencatatan Jadwal Makan <%= dataHewan.nama %>
+  </h1>
+  <div class="row g-3 border rounded-3 p-2 m-2">
+
+    <select class="form-select" name="hariMakan" id="hariMakan" required>
+      <option value="pagi">Pagi</option>
+      <option value="siang">Siang</option>
+      <option value="malam">Malam</option>
+    </select>
+
+    <!-- <input type="text" name="_id" value="<%#= dataHewan._id %>"> -->
+    <!-- <input type="text" name="nama" value="<%#= dataHewan.nama %>"> -->
+
+    <div class="col">
+      <input type="time" class="form-control" name="waktuMakan" id="waktuMakan" value="08:00" required>
+    </div>
+
+    <div class="col">
+      <input class="form-control" type="date" id="tanggalMakan" name="tanggalMakan" value="2023-06-10" min="2018-01-01"
+        required>
+    </div>
+  </div>
+  <!-- <label for="waktuMakan">Waktu Pemberian Makan:</label>
+  <input type="time" id="waktuMakan" name="waktuMakan"> -->
+
+  <button class="btn btn-success mt-2 rounded-3 shadow-sm p-3" id="btn-jadwalMakan" type="submit">Tambah Jadwal
+    Makan</button>
+</form>
+<a href="/data-hewan/<%= dataHewan.nama %>" class="card-link d-block mt-3">
+  &laquo Kembali ke Data Hewan</a>

@@ -1,19 +1,20 @@
 <div class="container" id="data__hewan">
   <h1 class="text-center fw-bold mb-3">Detail Hewan</h1>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col mb-3">
       <% if (!dataHewan) { %>
         <div class="alert alert-danger fw-bold" role="alert">
           Tidak terdapat data hewan <a href="/data-hewan" class="alert-link fw-normal">&laquo Kembali ke Daftar
             hewan</a>
         </div>
         <% } else { %>
-          <div class="card col" style="width: 18rem;">
+          <div class="card mx-auto">
             <div class="card-body">
-              <h5 class="card-title fs-2 fw-bold">
+              <h3 class="text-center fw-bold">Data Hewan</h3>
+              <h5 class="card-title fs-2 fw-bold text-capitalize">
                 <%= dataHewan.jenis %>
               </h5> <!-- Jenis -->
-              <h6 class="card-subtitle mb-2">
+              <h6 class="card-subtitle mb-2 text-capitalize">
                 <%= dataHewan.nama %>
               </h6> <!-- Nama -->
               <h6>
@@ -22,13 +23,57 @@
               <h6>
                 <%= dataHewan.beratBadan %> Kg
               </h6><!-- Berat Badan -->
-              <a href="/data-hewan/edit/<%= dataHewan.nama %>" class="btn btn-success">Edit</a>
-              <a href="/data-hewan/delete/<%= dataHewan.nama %>" class="btn btn-danger"
-                onclick="confirm('Apakah anda yakin ingin menghapus data?')">Hapus</a>
-              <a href="/data-hewan" class="card-link d-block mt-3">Kembali ke Data Hewan</a>
             </div>
           </div>
+
+          <hr>
+
+          <div class="card mx-auto">
+            <div class="card-body">
+              <h3 class="text-center fw-bold">Jadwal Makan</h3>
+              <p>Berilah hewan peliharaan anda asupan makan 3 kali dalam sehari (pagi, siang, malam)</p>
+
+              <a href="/data-hewan/<%= dataHewan.nama %>/form-jadwal-makan" class="text-decoration-none">
+                <button class="btn mt-2 rounded-3 shadow-sm p-3 text-white mx-auto d-inline"
+                  id="btn-lihat-jadwal">Masukkan
+                  Jadwal
+                  Makan</button>
+              </a>
+
+              <a href="/data-hewan/<%= dataHewan.nama %>/list-jadwal-makan" class="text-decoration-none d-block">
+                <button class="btn btn-primary mt-2 rounded-3 shadow-sm p-3 text-white mx-auto d-inline">Lihat
+                  Jadwal</button>
+              </a>
+            </div>
+          </div>
+          <hr>
+
+          <div class="card mx-auto">
+            <div class="card-body">
+              <h3 class="text-center fw-bold">Vaksinisasi</h3>
+              <% if (dataHewan.vaksin=='on' ) { %>
+                <p>Sudah divaksin, hewan anda memiliki antibodi yang kuat</p>
+                <% } else{ %>
+                  <p>Belum melakukan vaksin, hewan anda harus divaksin</p>
+                  <a href="/data-hewan/<%= dataHewan.nama %>/form-jadwal-vaksin"
+                    class="btn text-white p-3 mx-auto d-block" id="btn-lihat-jadwal">Buat Jadwal Vaksin</a>
+                  <% } %>
+            </div>
+          </div>
+          <hr>
           <% } %>
     </div>
+
+
+
+    <a href="/data-hewan/edit/<%= dataHewan.nama %>" class="btn btn-success mb-3">Edit</a>
+
+    <form action="/data-hewan?_method=DELETE" method="POST" class=" p-0 m-0">
+      <input type="hidden" name="nama" value="<%= dataHewan.nama %>">
+      <button type="submit" class="btn btn-danger w-100" onclick="return confirm('Apakah Anda Yakin?')">Hapus</button>
+    </form>
+
+    <a href="/data-hewan" class="card-link d-block mt-3">
+      &laquo Kembali ke Data Hewan</a>
   </div>
 </div>
