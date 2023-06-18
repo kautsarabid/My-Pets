@@ -1,39 +1,45 @@
 <div class="container">
-  <form class="form__daftar border-black border border-dark-subtle p-5 rounded-2 shadow-lg mx-auto">
+  <form method="POST" action="/form-daftar"
+    class="form__daftar border-black border border-dark-subtle p-5 rounded-2 shadow-lg mx-auto">
     <h1 class="text-center fw-bold fs-1">Daftar</h1>
 
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label fw-bold">Nama Lengkap</label>
-      <input type="email" class="form-control p-3" id="exampleInputEmail1" aria-describedby="emailHelp"
+      <label for="namaLengkap" class="form-label fw-bold">Nama Lengkap</label>
+      <input type="text" name="namaLengkap" class="form-control p-3" id="namaLengkap" aria-describedby="emailHelp"
         placeholder="Masukkan Nama Lengkap Anda">
     </div>
 
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label fw-bold">Username</label>
-      <input type="email" class="form-control p-3" id="exampleInputEmail1" aria-describedby="emailHelp"
+      <label for="username" class="form-label fw-bold">Username</label>
+      <input type="text" name="username" class="form-control p-3" id="username" aria-describedby="emailHelp"
         placeholder="Masukkan Username Anda">
     </div>
 
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label fw-bold">Alamat Email</label>
-      <input type="email" class="form-control p-3" id="exampleInputEmail1" aria-describedby="emailHelp"
+      <label for="email" class="form-label fw-bold">Alamat Email</label>
+      <input type="email" name="email" class="form-control p-3" id="email" aria-describedby="emailHelp"
         placeholder="Masukkan Alamat Email Anda">
     </div>
 
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label fw-bold">Password</label>
-      <input type="password" class="form-control p-3" id="exampleInputPassword1" placeholder="Masukkan Password">
+      <label for="password" class="form-label fw-bold">Password</label>
+      <input type="password" name="password" class="form-control p-3" id="password" placeholder="Masukkan Password">
     </div>
 
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label fw-bold">No. WhatsApp</label>
-      <input type="email" class="form-control p-3" id="exampleInputEmail1" aria-describedby="emailHelp"
-        placeholder="Masukkan Nomor WhatsApp Anda">
+      <label for="confirmPassword" class="form-label fw-bold">Confirm Password</label>
+      <input type="password" name="confirmPassword" class="form-control p-3" id="confirmPassword"
+        placeholder=" Masukkan Confirm Password">
+    </div>
+
+    <div class="mb-3">
+      <label for="noHp" class="form-label fw-bold">No. WhatsApp</label>
+      <input type="number" name="noHp" class="form-control p-3" id="noHp" placeholder="Masukkan Nomor WhatsApp Anda">
     </div>
 
     <div class="mb-3">
       <label for="jenisKelamin" class="form-label fw-bold">Jenis Kelamin</label>
-      <select class="form-select p-3" aria-label="Default select example" id="jenisKelamin">
+      <select class="form-select p-3" aria-label="Default select example" id="jenisKelamin" name="jenisKelamin">
         <option selected>Pilih Jenis Kelamin Anda</option>
         <option value="1">Laki-Laki</option>
         <option value="2">Perempuan</option>
@@ -41,15 +47,15 @@
     </div>
 
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label fw-bold">Alamat Rumah</label>
-      <input type="email" class="form-control p-3" id="exampleInputEmail1" aria-describedby="emailHelp"
+      <label for="alamatRumah" class="form-label fw-bold">Alamat Rumah</label>
+      <input type="text" name="alamatRumah" class="form-control p-3" id="alamatRumah"
         placeholder="Masukkan Alamat Rumah Anda">
     </div>
 
     <button type="submit" class="btn__form rounded-3 shadow-sm p-3 mb-3">Daftar</button>
 
     <div class="optional text-center">
-      <p class="lead fw-bold mb-0">Sudah punya akun? <span><a href="./form-masuk.html">Masuk</a></span></p>
+      <p class="lead fw-bold mb-0">Sudah punya akun? <span><a href="/form-masuk">Masuk</a></span></p>
     </div>
   </form>
 </div>
