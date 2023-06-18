@@ -21,6 +21,7 @@
                 <a href="/data-hewan/<%= hewan.nama %>" title="Click to see Detail"
                   class="text-decoration-none text-black">
                   <div class="card-body">
+                    <input type="hidden" value="<%= hewan.userId %>" name="userId">
                     <h5 class="card-title fs-2 fw-bold text-capitalize">
                       <%= hewan.jenis %>
                     </h5> <!-- Jenis -->
