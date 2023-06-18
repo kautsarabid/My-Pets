@@ -194,7 +194,6 @@ app.get('/form-pendataan-hewan', isAuthenticated, (req, res) => {
 // Halaman Data Hewan Peliharaan
 app.get('/data-hewan', isAuthenticated, async (req, res) => {
   if (req.session.user) {
-    const { nama, jenis, umur, beratBadan, vaksin } = req.params;
     const userId = req.session.user;
     const dataHewan = await DataHewan.find({ userId: userId });
     res.render('templates/data-hewan', {
@@ -357,7 +356,7 @@ app.post('/data-hewan/:nama/kartu-vaksin', isAuthenticated, async (req, res) => 
 // Proses data hewan
 app.post('/data-hewan', isAuthenticated, async (req, res) => {
   try {
-    const { nama, jenis, umur, beratBadan } = req.body;
+    const { nama, jenis, umur, beratBadan, vaksin } = req.body;
     const userId = req.session.user; // Ambil ID pengguna dari sesi
 
     const newDataHewan = new DataHewan({
@@ -365,6 +364,7 @@ app.post('/data-hewan', isAuthenticated, async (req, res) => {
       jenis: jenis,
       umur: umur,
       beratBadan: beratBadan,
+      vaksin: vaksin,
       userId: userId // Simpan ID pengguna terkait
     });
 
