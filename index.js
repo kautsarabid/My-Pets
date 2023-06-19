@@ -11,7 +11,7 @@ const User = require('./src/scripts/model/user');
 const DataHewan = require('./src/scripts/model/data-hewan');
 
 const app = express();
-const port = 27017;
+const port = 3000;
 
 
 // Menggunakan EJS
