@@ -144,6 +144,13 @@ main .btn__daftar__hewan__baru:hover {
   background-color: white;
 }
 
+main .team__pengembang img {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 200px;
+  height: 200px;
+}
+
 /*
   DATA HEWAN
 */
