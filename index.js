@@ -15,7 +15,7 @@ const port = 3000;
 
 
 // Menggunakan EJS
-app.set('views', './src/scripts/views');
+app.set('views', 'src/scripts/views');
 app.set('view engine', 'ejs');
 
 // Setup method override
@@ -23,7 +23,7 @@ app.use(methodOverride('_method'));
 
 // Built-in middleware
 app.use(expressLayout);
-app.use(express.static('src'));
+app.use(express.static('src/public'));
 app.use(express.urlencoded({ extended: true }));
 
 // konfigurasi flash
