@@ -11,7 +11,7 @@ const User = require('./src/scripts/model/user');
 const DataHewan = require('./src/scripts/model/data-hewan');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 9001;
 
 
 // Menggunakan EJS
@@ -69,8 +69,8 @@ app.get('/', (req, res) => {
 
 // Halaman Daftar
 app.get('/form-daftar', (req, res) => {
-  res.render('templates/form-daftar.ejs', {
-    layout: 'layouts/main.ejs',
+  res.render('templates/form-daftar', {
+    layout: 'layouts/main',
     title: 'Daftar',
     message: req.flash('message'),
     currentPage: 'userLogin'
