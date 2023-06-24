@@ -31,7 +31,7 @@ app.use(cookieParser('secret'));
 app.use(session({
   cookie: { maxAge: 24 * 60 * 60 * 1000 },
   secret: 'secret',
-  resave: true,
+  resave: false,
   saveUninitialized: true
 })
 );
