@@ -1,7 +1,8 @@
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
 const methodOverride = require('method-override');
-const session = require('cookie-session');
+const session = require('express-session');
+const MemoryStore = require('memorystore')(session);
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
@@ -30,6 +31,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser('secret'));
 app.use(session({
   cookie: { maxAge: 24 * 60 * 60 * 1000 },
+  store: new MemoryStore({
+    checkPeriod: 86400000 // prune expired entries every 24h
+  }),
   secret: 'secret',
   resave: false,
   saveUninitialized: true
