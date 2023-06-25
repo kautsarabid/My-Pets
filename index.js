@@ -7,12 +7,17 @@ const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
 
-require('./src/scripts/data/db')();
+const dotenv = require('dotenv');
+const connectDB = require('./src/scripts/data/db');
 const User = require('./src/scripts/model/user');
 const DataHewan = require('./src/scripts/model/data-hewan');
 
+dotenv.config();
 const app = express();
 const port = process.env.PORT || 9001;
+const mode = process.env.NODE_ENV;
+
+connectDB();
 
 
 // Menggunakan EJS
