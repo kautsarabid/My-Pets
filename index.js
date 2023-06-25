@@ -41,7 +41,7 @@ app.use(session({
   //   checkPeriod: 86400000 // prune expired entries every 24h
   // }),
   secret: 'secret',
-  resave: true,
+  resave: false,
   saveUninitialized: true
 })
 );
@@ -57,8 +57,8 @@ const isAuthenticated = (req, res, next) => {
 
 app.use(flash());
 app.use((req, res, next) => {
-  if (!req.session.userId && req.cookies.session) {
-    req.session.userId = req.cookies.session;
+  if (!req.session.user && req.cookies.session) {
+    req.session.user = req.cookies.session;
   }
   next();
 });
