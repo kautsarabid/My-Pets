@@ -30,7 +30,7 @@ app.use(methodOverride('_method'));
 
 // Built-in middleware
 app.use(expressLayout);
-app.use(express.static('./src/public'));
+app.use(express.static(path.join(__dirname, './src/public')));
 app.use(express.urlencoded({ extended: true }));
 
 // konfigurasi flash
