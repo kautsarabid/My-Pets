@@ -21,7 +21,7 @@ connectDB();
 
 
 // Menggunakan EJS
-app.set('views', './src/scripts/views');
+app.set('views', 'src/scripts/views');
 app.set('view engine', 'ejs');
 
 // Setup method override
