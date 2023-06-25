@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
 
-require('./src/scripts/data/db');
+require('./src/scripts/data/db')();
 const User = require('./src/scripts/model/user');
 const DataHewan = require('./src/scripts/model/data-hewan');
 

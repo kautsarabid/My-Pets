@@ -1,4 +1,19 @@
-const mongoose = require('mongoose');
+const { connect, connection } = require('mongoose');
+const { config } = require('dotenv');
+// require('dotenv').config()
+// console.log(process.env)
 
-mongoose.connect("mongodb://besto:kautsarabid1234@ac-jhmlh9w-shard-00-00.swdo2yu.mongodb.net:27017,ac-jhmlh9w-shard-00-01.swdo2yu.mongodb.net:27017,ac-jhmlh9w-shard-00-02.swdo2yu.mongodb.net:27017/?ssl=true&replicaSet=atlas-woi1b8-shard-0&authSource=admin&retryWrites=true&w=majority")
-  .then(() => console.log('Connected!'));
+module.exports = () => {
+  config();
+  const uri = process.env.DB_URI;
+
+  connect(uri, {
+    dbName: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    pass: process.env.DB_PASSWORD,
+  })
+    .then(() => {
+      console.log('Connection estabislished with MongoDB');
+    })
+    .catch(error => console.error(error.message));
+}
