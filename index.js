@@ -21,10 +21,6 @@ const mode = process.env.NODE_ENV;
 connectDB();
 
 
-// Menggunakan EJS
-app.set('views', path.join(__dirname, 'src/scripts/views'));
-app.set('view engine', 'ejs');
-
 // Setup method override
 app.use(methodOverride('_method'));
 
@@ -36,6 +32,10 @@ app.use(
 );
 // app.use(express.static(path.join(__dirname, './src/public')));
 app.use(express.urlencoded({ extended: true }));
+
+// Menggunakan EJS
+app.set('views', path.join(__dirname, 'src/scripts/views'));
+app.set('view engine', 'ejs');
 
 // konfigurasi flash
 app.use(cookieParser('secret'));
