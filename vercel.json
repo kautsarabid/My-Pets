@@ -7,7 +7,7 @@
     },
     {
       "src": "*.ejs",
-      "use": "@vercel/node"
+      "use": "@vercel/static"
     }
   ],
   "routes": [
