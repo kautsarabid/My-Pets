@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const expressLayout = require('express-ejs-layouts');
 const methodOverride = require('method-override');
 const session = require('express-session');
@@ -21,7 +22,7 @@ connectDB();
 
 
 // Menggunakan EJS
-app.set('views', 'src/scripts/views');
+app.set('views', path.join(__dirname, 'src/scripts/views'));
 app.set('view engine', 'ejs');
 
 // Setup method override
