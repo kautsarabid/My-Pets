@@ -161,7 +161,7 @@ app.post('/form-masuk', async (req, res) => {
       return;
     }
 
-    req.session.user = user._id;
+    req.session.user = user.email;
     res.redirect('/data-hewan');
   } catch (error) {
     console.error(error);
