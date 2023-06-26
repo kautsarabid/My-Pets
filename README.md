@@ -1,5 +1,5 @@
 # Aplikasi pembantu pencatatan data dan jadwal hewan peliharaan
-Tugas Akhir Dicoding
+
 ## My-Pets
 **MyPets** merupakan sebuah website yang dapat membantu para pemilik hewan peliharaan agar lebih teratur dalam memberi makan, membuat jadwal vaksinasi pada hewan mereka.
 
@@ -13,10 +13,11 @@ Tugas Akhir Dicoding
 - Membuat Jadwal Vaksin bagi Hewan Peliharaan yang Belum Melakukan Vaksinisasi
 
 ## Instalasi
--Setelah melakukan download jalankan perintah `npm install` untuk menginstall semua dependency yang digunakan
--Lalu jalankan perintah `npm run start-dev` untuk memulai menggunakannya
--setelah itu terdapat *Example app listening on port 5000* pada console
--lalu ketikan [local](http://localhost:5000/) pada web browser
+- Download/Clone repository ini
+- Jalankan perintah `npm install` untuk menginstall semua dependency yang digunakan
+- Jalankan perintah `npm run start-dev` untuk memulai menggunakannya
+- Terdapat *Example app listening on port 5000* pada terminal
+- Ketikan [local](http://localhost:5000/) pada web browser
 
 ## Library atau External Repository/API yang digunakan
 - [Bootsrap5](https://getbootstrap.com/)
