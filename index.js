@@ -4,6 +4,7 @@ const cors = require('cors');
 const expressLayout = require('express-ejs-layouts');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const MongoStore = require('connect-mongo');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
@@ -35,17 +36,16 @@ app.set('view engine', 'ejs');
 
 // konfigurasi flash
 app.set("trust proxy", 1);
-app.use(cookieParser('secret'));
+app.use(cookieParser());
 app.use(session({
   secret: process.env.SESS_SECRET,
+  saveUninitialized: false,
   resave: false,
-  saveUninitialized: true,
-  proxy: true,
   name: 'MyPetsCookie',
-  cookie: {
-    secure: 'auto',
-    maxAge: 1000 * 60 * 60 * 48,
-  },
+  store: MongoStore.create({
+    mongoUrl: process.env.MONGODB_URI,
+    touchAfter: 24 * 3600
+  })
 }));
 app.use(cors({
   credentials: true,
@@ -53,7 +53,7 @@ app.use(cors({
 }));
 
 // Middleware untuk memeriksa status login
-const isAuthenticated = async (req, res, next) => {
+const isAuthenticated = (req, res, next) => {
   if (req.session.user) {
     next();
   } else {
@@ -162,7 +162,7 @@ app.post('/form-masuk', async (req, res) => {
     }
 
     req.session.user = user._id;
-    res.redirect('/data-hewan');
+    res.redirect('/layanan');
   } catch (error) {
     console.error(error);
     req.flash('message', 'Terjadi kesalahan');
@@ -183,7 +183,7 @@ app.get('/layanan', isAuthenticated, (req, res) => {
     res.render('templates/layanan', {
       layout: 'layouts/main',
       title: 'Layanan',
-      // user: req.session.user,
+      user: req.session.user,
       currentPage: 'userLogin'
     });
   } else {
@@ -198,8 +198,8 @@ app.get('/form-pendataan-hewan', isAuthenticated, (req, res) => {
     res.render('templates/form-pendataan-hewan', {
       layout: 'layouts/main',
       title: 'Pendataan Hewan Peliharaan',
-      currentPage: 'userLogin'
-      // user: req.session.user,
+      currentPage: 'userLogin',
+      user: req.session.user,
     });
   } else {
     res.redirect('/form-masuk');
