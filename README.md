@@ -12,14 +12,20 @@
 - Membuat Jadwal Makan untuk Setiap Hewan Peliharaan
 - Membuat Jadwal Vaksin bagi Hewan Peliharaan yang Belum Melakukan Vaksinisasi
 
+## Comptibility
+- Support NodeJS 18.x.x
+- Support NPM upto 9.x.x
+- Support ExpressJS upto 4.x.x
+- Support Mongosh upto 1.x.x
+
 ## Instalasi
 - Download/Clone repository ini
 - Jalankan perintah `npm install` untuk menginstall semua dependency yang digunakan
+- Mengganti connection pada file db.js dengan
+  ```mongoose.connect('mongodb://127.0.0.1:27017/<nama_database>');```
 - Jalankan perintah `npm run start-dev` untuk memulai menggunakannya
 - Terdapat *Example app listening on port 5000* pada terminal
 - Click link berikut [localhost:5000](http://localhost:5000/) atau dapat juga mengetikan *http://localhost:5000/* pada web browser
-- Mengganti connection pada file db.js dengan
-  ```mongoose.connect('mongodb://127.0.0.1:27017/<nama_database>');```
 
 ## Library atau External Repository/API yang digunakan
 - [Bootsrap5](https://getbootstrap.com/)
