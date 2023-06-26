@@ -161,7 +161,7 @@ app.post('/form-masuk', async (req, res) => {
       return;
     }
 
-    req.session.user = user.email;
+    req.session.user = user._id;
     res.redirect('/data-hewan');
   } catch (error) {
     console.error(error);
@@ -183,7 +183,7 @@ app.get('/layanan', isAuthenticated, (req, res) => {
     res.render('templates/layanan', {
       layout: 'layouts/main',
       title: 'Layanan',
-      user: req.session.user,
+      // user: req.session.user,
       currentPage: 'userLogin'
     });
   } else {
@@ -198,8 +198,8 @@ app.get('/form-pendataan-hewan', isAuthenticated, (req, res) => {
     res.render('templates/form-pendataan-hewan', {
       layout: 'layouts/main',
       title: 'Pendataan Hewan Peliharaan',
-      currentPage: 'userLogin',
-      user: req.session.user,
+      currentPage: 'userLogin'
+      // user: req.session.user,
     });
   } else {
     res.redirect('/form-masuk');
