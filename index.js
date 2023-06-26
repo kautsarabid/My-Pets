@@ -36,12 +36,13 @@ app.set('view engine', 'ejs');
 // konfigurasi flash
 app.use(cookieParser('secret'));
 app.use(session({
-  cookie: {
-    secure: 'auto'
-  },
   secret: process.env.SESS_SECRET,
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  cookie: {
+    secure: 'auto',
+    sameSite: 'none'
+  },
 }));
 app.use(cors({
   credentials: true,
