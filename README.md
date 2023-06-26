@@ -17,7 +17,7 @@
 - Jalankan perintah `npm install` untuk menginstall semua dependency yang digunakan
 - Jalankan perintah `npm run start-dev` untuk memulai menggunakannya
 - Terdapat *Example app listening on port 5000* pada terminal
-- Ketikan [local](http://localhost:5000/) pada web browser
+- Click link berikut [localhost:5000](http://localhost:5000/) atau dapat juga mengetikan *http://localhost:5000/* pada web browser
 
 ## Library atau External Repository/API yang digunakan
 - [Bootsrap5](https://getbootstrap.com/)
