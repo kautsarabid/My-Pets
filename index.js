@@ -41,7 +41,7 @@ app.use(session({
   //   checkPeriod: 86400000 // prune expired entries every 24h
   // }),
   secret: 'secret',
-  resave: false,
+  resave: true,
   saveUninitialized: true
 })
 );
