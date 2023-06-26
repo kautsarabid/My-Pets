@@ -45,7 +45,6 @@ app.use(session({
   cookie: {
     secure: 'auto',
     maxAge: 1000 * 60 * 60 * 48,
-    httpOnly: false,
   },
 }));
 app.use(cors({
@@ -54,23 +53,10 @@ app.use(cors({
 }));
 
 // Middleware untuk memeriksa status login
-const isAuthenticated = (req, res, next) => {
+const isAuthenticated = async (req, res, next) => {
   if (req.session.user) {
     next();
   } else {
-    res.redirect('/form-masuk');
-  }
-};
-
-// cek session
-const sessionChecker = (req, res, next) => {
-  console.log(`Session Checker: ${req.session.id}`.green);
-  console.log(req.session);
-  if (req.session.user) {
-    console.log(`Found User Session`.green);
-    next();
-  } else {
-    console.log(`No User Session Found`.red);
     res.redirect('/form-masuk');
   }
 };
@@ -176,7 +162,7 @@ app.post('/form-masuk', async (req, res) => {
     }
 
     req.session.user = user._id;
-    res.redirect('/layanan');
+    res.redirect('/data-hewan');
   } catch (error) {
     console.error(error);
     req.flash('message', 'Terjadi kesalahan');
@@ -192,7 +178,7 @@ app.get('/logout', (req, res) => {
 });
 
 // Halaman Layanan
-app.get('/layanan', sessionChecker, isAuthenticated, (req, res) => {
+app.get('/layanan', isAuthenticated, (req, res) => {
   if (req.session.user) {
     res.render('templates/layanan', {
       layout: 'layouts/main',
