@@ -3,7 +3,7 @@ const path = require('path');
 const expressLayout = require('express-ejs-layouts');
 const methodOverride = require('method-override');
 const session = require('express-session');
-const MemoryStore = require('memorystore')(session);
+// const MemoryStore = require('memorystore')(session);
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const bcrypt = require('bcrypt');
@@ -16,7 +16,7 @@ const DataHewan = require('./src/scripts/model/data-hewan');
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 9001;
-const mode = process.env.NODE_ENV;
+// const mode = process.env.NODE_ENV;
 
 connectDB();
 
@@ -37,9 +37,9 @@ app.set('view engine', 'ejs');
 app.use(cookieParser('secret'));
 app.use(session({
   cookie: { maxAge: 24 * 60 * 60 * 1000 },
-  store: new MemoryStore({
-    checkPeriod: 86400000 // prune expired entries every 24h
-  }),
+  // store: new MemoryStore({
+  //   checkPeriod: 86400000 // prune expired entries every 24h
+  // }),
   secret: 'secret',
   resave: false,
   saveUninitialized: true
