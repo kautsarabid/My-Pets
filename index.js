@@ -34,14 +34,18 @@ app.set('views', path.join(__dirname, 'src/scripts/views'));
 app.set('view engine', 'ejs');
 
 // konfigurasi flash
+app.set("trust proxy", 1);
 app.use(cookieParser('secret'));
 app.use(session({
   secret: process.env.SESS_SECRET,
   resave: false,
   saveUninitialized: true,
+  proxy: true,
+  name: 'MyPetsCookie',
   cookie: {
     secure: 'auto',
-    sameSite: 'none'
+    maxAge: 1000 * 60 * 60 * 48,
+    httpOnly: false,
   },
 }));
 app.use(cors({
@@ -58,6 +62,19 @@ const isAuthenticated = (req, res, next) => {
   }
 };
 
+// cek session
+const sessionChecker = (req, res, next) => {
+  console.log(`Session Checker: ${req.session.id}`.green);
+  console.log(req.session);
+  if (req.session.user) {
+    console.log(`Found User Session`.green);
+    next();
+  } else {
+    console.log(`No User Session Found`.red);
+    res.redirect('/login');
+  }
+};
+
 app.use(flash());
 app.use((req, res, next) => {
   if (!req.session.user && req.cookies.session) {
@@ -71,7 +88,7 @@ app.use((req, res, next) => {
  */
 
 // Landing Page
-app.get('/', (req, res) => {
+app.get('/', sessionChecker, (req, res) => {
   res.render('landing-page', {
     layout: 'landing-page',
     title: 'Home',
