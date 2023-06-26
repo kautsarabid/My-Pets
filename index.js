@@ -71,7 +71,7 @@ const sessionChecker = (req, res, next) => {
     next();
   } else {
     console.log(`No User Session Found`.red);
-    res.redirect('/login');
+    res.redirect('/form-masuk');
   }
 };
 
@@ -88,7 +88,7 @@ app.use((req, res, next) => {
  */
 
 // Landing Page
-app.get('/', sessionChecker, (req, res) => {
+app.get('/', (req, res) => {
   res.render('landing-page', {
     layout: 'landing-page',
     title: 'Home',
@@ -192,7 +192,7 @@ app.get('/logout', (req, res) => {
 });
 
 // Halaman Layanan
-app.get('/layanan', isAuthenticated, (req, res) => {
+app.get('/layanan', sessionChecker, isAuthenticated, (req, res) => {
   if (req.session.user) {
     res.render('templates/layanan', {
       layout: 'layouts/main',
