@@ -36,7 +36,7 @@ app.set('view engine', 'ejs');
 // konfigurasi flash
 app.use(cookieParser('secret'));
 app.use(session({
-  cookie: { maxAge: 24 * 60 * 60 * 1000 },
+  cookie: { maxAge: 24 * 60 * 60 * 1000, secure: true },
   // store: new MemoryStore({
   //   checkPeriod: 86400000 // prune expired entries every 24h
   // }),
