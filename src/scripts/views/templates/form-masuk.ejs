@@ -1,30 +1,43 @@
 <div class="container-fluid">
-  <form class="form__masuk border-black border border-dark-subtle p-4 rounded-2 shadow-lg mx-auto" action="/form-masuk"
-    method="POST">
-    <h1 class="text-center fw-bold fs-1">Masuk</h1>
-    <% if (message) { %>
-      <p>
-        <%= message %>
-      </p>
-      <% } %>
-        <div class="mb-3">
-          <label for="email" class="form-label fw-bold">Email</label>
-          <input type="email" class="form-control p-3" name="email" id="email" aria-describedby="emailHelp"
-            placeholder="Masukkan Alamat Email">
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label fw-bold">Kata Sandi</label>
-          <input type="password" class="form-control p-3" name="password" id="password"
-            placeholder="Masukkan Kata Sandi">
-        </div>
+	<form
+		class="form__masuk border-black border border-dark-subtle p-4 rounded-2 shadow-lg mx-auto"
+		action="/form-masuk"
+		method="POST"
+	>
+		<h1 class="text-center fw-bold fs-1">Masuk</h1>
+		<% if (message) { %>
+		<p><%= message %></p>
+		<% } %>
+		<div class="mb-3">
+			<label for="email" class="form-label fw-bold">Email</label>
+			<input
+				type="email"
+				class="form-control p-3"
+				name="email"
+				id="email"
+				aria-describedby="emailHelp"
+				placeholder="Masukkan Alamat Email"
+			/>
+		</div>
+		<div class="mb-3">
+			<label for="password" class="form-label fw-bold">Kata Sandi</label>
+			<input
+				type="password"
+				class="form-control p-3"
+				name="password"
+				id="password"
+				placeholder="Masukkan Kata Sandi"
+			/>
+		</div>
 
-        <button type="submit" class="btn__form rounded-3 shadow-sm p-3 mb-3">Submit</button>
+		<button type="submit" class="btn__form rounded-3 shadow-sm p-3 mb-3">
+			Submit
+		</button>
 
-        <div class="optional text-center">
-          <p class="lead fw-bold mb-0">Lupa Kata Sandi? <span><a href="">Ganti</a></span></p>
-          <p class="lead fw-bold mb-0">atau</p>
-          <p class="lead fw-bold mb-0">Belum punya akun? <span><a href="/form-daftar">Daftar</a></span>
-          </p>
-        </div>
-  </form>
+		<div class="optional text-center">
+			<p class="lead fw-bold mb-0">
+				Belum punya akun? <span><a href="/form-daftar">Daftar</a></span>
+			</p>
+		</div>
+	</form>
 </div>
