@@ -1,6 +1,6 @@
 # Aplikasi pembantu pencatatan data dan jadwal hewan peliharaan
 
-## [MyPets!](my-pets-two.vercel.app)
+## [MyPets!](https://my-pets-two.vercel.app/)
 **MyPets** merupakan sebuah website yang dapat membantu para pemilik hewan peliharaan agar lebih teratur dalam memberi makan, membuat jadwal vaksinasi pada hewan mereka.
 
 ## Fitur
@@ -34,4 +34,4 @@
 - [MongoDB](https://www.mongodb.com/)
 
 ## Link Website
-[MyPets!](my-pets-two.vercel.app)
+[MyPets!](https://my-pets-two.vercel.app/)
