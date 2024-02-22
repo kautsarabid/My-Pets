@@ -30,7 +30,7 @@ body {
 */
 
 main#landing__page {
-  background-color: #00C48D;
+  background-color: #fffafa;
   height: 100vh;
 }
 
@@ -68,11 +68,11 @@ main#landing__page {
   box-shadow: none;
 }
 
-.halaman__utama img {
+/* .halaman__utama img {
   display: block;
   width: 638px;
   height: 587px;
-}
+} */
 
 
 /*
